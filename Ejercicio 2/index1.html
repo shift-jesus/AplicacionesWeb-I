@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punto 1 - Contador Interactivo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+      font-family: sans-serif;
+    }
+    .contenedor {
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      font-size: 5rem;
+      margin: 0 0 1.5rem 0;
+      color: #333;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      margin: 0 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1 id="numero">0</h1>
+    <button id="btn-disminuir">Disminuir</button>
+    <button id="btn-incrementar">Incrementar</button>
+  </div>
+
+  <script>
+    let contador = 0;
+    
+    const elementoNumero = document.getElementById('numero');
+    const btnIncrementar = document.getElementById('btn-incrementar');
+    const btnDisminuir = document.getElementById('btn-disminuir');
+
+    btnIncrementar.addEventListener('click', () => {
+      contador += 1;
+      elementoNumero.textContent = contador;
+    });
+
+    btnDisminuir.addEventListener('click', () => {
+      contador -= 1;
+      elementoNumero.textContent = contador;
+    });
+  </script>
+
+</body>
+</html>

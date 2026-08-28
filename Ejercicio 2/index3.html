@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punto 3 - Reloj Digital</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #111;
+    }
+    .reloj-contenedor {
+      background-color: #222;
+      border: 3px solid #444;
+      border-radius: 10px;
+      padding: 2rem 4rem;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    }
+    .pantalla {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 5rem;
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00;
+      letter-spacing: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reloj-contenedor">
+    <div class="pantalla">
+      <span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span>
+    </div>
+  </div>
+
+  <script>
+    const elHoras = document.getElementById('horas');
+    const elMinutos = document.getElementById('minutos');
+    const elSegundos = document.getElementById('segundos');
+
+    function formatearTiempo(numero) {
+      return numero < 10 ? '0' + numero : numero;
+    }
+
+    function actualizarReloj() {
+      const fechaActual = new Date();
+      
+      const horas = formatearTiempo(fechaActual.getHours());
+      const minutos = formatearTiempo(fechaActual.getMinutes());
+      const segundos = formatearTiempo(fechaActual.getSeconds());
+
+      elHoras.textContent = horas;
+      elMinutos.textContent = minutos;
+      elSegundos.textContent = segundos;
+    }
+
+    actualizarReloj();
+    
+    setInterval(actualizarReloj, 1000);
+  </script>
+
+</body>
+</html>
