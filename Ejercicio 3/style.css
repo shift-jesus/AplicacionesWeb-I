@@ -3,8 +3,8 @@ body {
     max-width: 800px;
     margin: 30px auto;
     text-align: center;
-    color: #faf8f8;
-    background: #a53535;
+    color: #ff0000;
+    background: #000000;
 
     
 }
@@ -18,9 +18,9 @@ nav {
 
 .nav-btn {
     padding: 10px 20px;
-    color: rgb(255, 196, 0);
-    background-color: #c75656;
-    border: 1px solid #ffe600;
+    color: #ff0000;
+    background-color: #1a0000;
+    border: 1px solid #ff0000;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
@@ -28,13 +28,13 @@ nav {
 
 .nav-btn.active 
 .nav-btn:hover {
-    background-color: #ffe600;
-    color: #c75656;
+    background-color: #ff0000;
+    color: #000000;
 }
 
 .apge{
     display: none;
-    border: 1px solid #ffe600;
+    border: 1px solid #ff0000;
     border-radius: 8px;
     padding: 20px;
 }
@@ -51,11 +51,11 @@ table {
 
 th, td{
     
-    border: 5px solid #ffa600;
+    border: 5px solid #ff0000;
 }
 
 th {
     
-    color: #dac400;
+    color: #ff0000;
     padding: 10px;
 }
