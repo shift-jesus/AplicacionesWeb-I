@@ -32,14 +32,14 @@ nav {
     color: #000000;
 }
 
-.apge{
+.page{
     display: none;
     border: 1px solid #ff0000;
     border-radius: 8px;
     padding: 20px;
 }
 
-.apge.active {
+.page.active {
     display: block;
 }
 
